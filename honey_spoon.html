@@ -1,0 +1,1593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8e7">
+
+  <title>Honey Spoon | Pure Goodness in Every Spoon</title>
+  <meta name="description" content="Discover Honey Spoon, honey sourced from Kashipur. Order your honey spoon for ₹25 through WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #ffb900;
+      --gold-dark: #e99b00;
+      --cream: #fff8e7;
+      --brown: #42220b;
+      --text: #302318;
+      --green: #128c45;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: #fffdf8;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .eyebrow {
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 13px;
+    }
+
+    h1, h2, h3 {
+      color: var(--brown);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 45px);
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      color: #756656;
+      margin-top: 12px;
+    }
+
+    .highlight {
+      color: var(--gold-dark);
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 253, 248, .96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f2e4c7;
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--brown);
+    }
+
+    .logo-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--gold);
+      border-radius: 15px;
+      font-size: 26px;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-dark);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 27px;
+      cursor: pointer;
+      color: var(--brown);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border: 0;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px #42220b20;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #281500;
+    }
+
+    .btn-outline {
+      border: 1.5px solid #7d5a30;
+      color: var(--brown);
+      background: transparent;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 85% 45%, #d6e5a3 0%, transparent 40%),
+        linear-gradient(115deg, #fff3d0, #fffaf0 55%, #f3edcc);
+    }
+
+    .hero::before {
+      content: "⬡  ⬡  ⬡";
+      position: absolute;
+      top: 30px;
+      left: -10px;
+      font-size: 70px;
+      line-height: 1.5;
+      color: #efb92c35;
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 35px;
+      min-height: 570px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid #f1d48a;
+      border-radius: 50px;
+      background: #fff8e7;
+      color: #8a5c10;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(43px, 6vw, 75px);
+      letter-spacing: -2px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: var(--gold-dark);
+      display: block;
+    }
+
+    .hero-subtitle {
+      margin-top: 18px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #8c602b;
+    }
+
+    .hero-description {
+      color: #6b5a48;
+      max-width: 490px;
+      margin: 14px 0 27px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-note {
+      margin-top: 23px;
+      font-size: 12px;
+      color: #796955;
+    }
+
+    .hero-visual {
+      min-height: 430px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .honey-circle {
+      position: absolute;
+      width: min(410px, 90%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffe48c, #f8b500);
+      box-shadow: 0 30px 70px #d99a2735;
+    }
+
+    .honey-jar {
+      position: relative;
+      z-index: 1;
+      width: 270px;
+      height: 300px;
+      border-radius: 40px 40px 55px 55px;
+      background: linear-gradient(90deg, #c8750b, #ffcb38 24%, #f9a400 65%, #b66b0a);
+      border: 7px solid #fff1bc;
+      box-shadow: inset 0 0 22px #fff6bd, 0 22px 40px #85500d30;
+      transform: rotate(-5deg);
+    }
+
+    .honey-jar::before {
+      content: "";
+      position: absolute;
+      top: -35px;
+      left: 52px;
+      width: 145px;
+      height: 38px;
+      border-radius: 10px 10px 5px 5px;
+      background: repeating-linear-gradient(90deg, #8d4c08 0 8px, #c78318 8px 12px);
+      border: 4px solid #f3d48c;
+    }
+
+    .honey-jar::after {
+      content: "HONEY\A SPOON";
+      white-space: pre;
+      text-align: center;
+      position: absolute;
+      left: 23px;
+      right: 23px;
+      top: 85px;
+      padding: 20px 0;
+      border-radius: 15px;
+      background: #fff8e8;
+      color: #6b3506;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+
+    .jar-shine {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 22px;
+      height: 180px;
+      border-radius: 30px;
+      background: #ffffff75;
+      filter: blur(4px);
+    }
+
+    .honey-dipper {
+      position: absolute;
+      z-index: 2;
+      top: 15px;
+      right: 4%;
+      font-size: 100px;
+      transform: rotate(-35deg);
+      filter: drop-shadow(0 12px 10px #79500a35);
+    }
+
+    .price-sticker {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: 35px;
+      background: var(--brown);
+      color: white;
+      width: 125px;
+      height: 125px;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      border-radius: 50%;
+      border: 5px dotted #ffe5a0;
+      transform: rotate(-10deg);
+      box-shadow: 0 10px 30px #4a2a1430;
+    }
+
+    .price-sticker strong {
+      font-size: 32px;
+      color: var(--gold);
+    }
+
+    .price-sticker small {
+      font-size: 11px;
+    }
+
+    .flower {
+      position: absolute;
+      bottom: 15px;
+      right: 12px;
+      font-size: 50px;
+    }
+
+    /* BENEFITS STRIP */
+
+    .benefits-strip {
+      padding: 24px 0;
+      background: white;
+      border-bottom: 1px solid #f1e5d0;
+    }
+
+    .benefit-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .benefit-item .emoji {
+      font-size: 28px;
+    }
+
+    .benefit-item strong {
+      display: block;
+      font-size: 13px;
+      color: var(--brown);
+    }
+
+    .benefit-item small {
+      font-size: 11px;
+      color: #817261;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .about-art {
+      position: relative;
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 25px;
+      background:
+        radial-gradient(circle at 20% 15%, #fff5c7 0 10%, transparent 11%),
+        linear-gradient(145deg, #ffe9a4, #f6bc39);
+    }
+
+    .about-art::before,
+    .about-art::after {
+      content: "⬡";
+      position: absolute;
+      color: #fff6d570;
+      font-size: 180px;
+    }
+
+    .about-art::before {
+      left: -35px;
+      top: -40px;
+    }
+
+    .about-art::after {
+      right: -35px;
+      bottom: -60px;
+    }
+
+    .about-emoji {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      font-size: 100px;
+    }
+
+    .about-emoji p {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--brown);
+    }
+
+    .about-copy > p {
+      color: #756656;
+      margin: 17px 0;
+    }
+
+    .about-points {
+      margin: 24px 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .check {
+      width: 27px;
+      height: 27px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff0be;
+      color: #926000;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .about-point strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .about-point small {
+      color: #817261;
+      font-size: 12px;
+    }
+
+    /* PRODUCT */
+
+    .products {
+      background: #fff8e9;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #f0e4cb;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px #51310f12;
+    }
+
+    .product-art {
+      height: 230px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #fff0c3, #f9ce5e);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-art::before {
+      content: "";
+      width: 170px;
+      height: 170px;
+      position: absolute;
+      border: 1px solid #ffffff80;
+      border-radius: 50%;
+    }
+
+    .product-art span {
+      z-index: 1;
+      font-size: 100px;
+      filter: drop-shadow(0 12px 10px #84520b25);
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #817261;
+      font-size: 13px;
+      min-height: 48px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .product-price {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--brown);
+    }
+
+    .product-price small {
+      display: block;
+      font-size: 10px;
+      color: #88755d;
+      font-weight: 500;
+    }
+
+    .product-bottom .btn {
+      padding: 11px 15px;
+      font-size: 12px;
+    }
+
+    /* WHY US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 30px 20px;
+      border: 1px solid #f0e4cb;
+      border-radius: 20px;
+      background: white;
+    }
+
+    .why-icon {
+      margin: 0 auto 17px;
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fff1c7;
+      font-size: 32px;
+    }
+
+    .why-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: #817261;
+      font-size: 12px;
+    }
+
+    /* KASHIPUR */
+
+    .origin {
+      padding: 75px 0;
+      background: linear-gradient(120deg, #43230d, #70430f);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .origin h2 {
+      color: white;
+    }
+
+    .origin p {
+      color: #f1e2c9;
+      margin: 15px 0 25px;
+    }
+
+    .origin-badge {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid #f9c85270;
+      border-radius: 30px;
+      color: #ffda73;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .origin-visual {
+      min-height: 270px;
+      border-radius: 25px;
+      background:
+        linear-gradient(0deg, #39230b65, transparent),
+        url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      box-shadow: 0 20px 50px #160b0430;
+    }
+
+    .origin-visual span {
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* ORDER */
+
+    .order-section {
+      padding: 85px 0;
+      text-align: center;
+      background:
+        radial-gradient(circle at 10% 20%, #ffdf8b70, transparent 28%),
+        #fff6df;
+    }
+
+    .order-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 50px 30px;
+      border-radius: 28px;
+      border: 1px solid #f2dfae;
+      background: #fffdf8;
+      box-shadow: 0 15px 50px #74501b0d;
+    }
+
+    .order-box .big-emoji {
+      font-size: 60px;
+    }
+
+    .order-box p {
+      max-width: 540px;
+      margin: 15px auto 25px;
+      color: #756656;
+    }
+
+    .order-box .btn {
+      padding: 17px 30px;
+    }
+
+    .order-number {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #74624e;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid #eee0c5;
+      background: white;
+      padding: 20px 23px;
+      border-radius: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    details p {
+      padding-top: 12px;
+      font-size: 14px;
+      color: #817261;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #321b0a;
+      color: white;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    footer .logo {
+      color: white;
+    }
+
+    .footer-description {
+      color: #cbbca8;
+      font-size: 13px;
+      max-width: 320px;
+      margin-top: 15px;
+    }
+
+    footer h3 {
+      color: #ffcb4a;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+      color: #e5d7c5;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #ffcb4a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ffffff20;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #cbbca8;
+      font-size: 11px;
+    }
+
+    /* FLOATING WHATSAPP */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      background: #16a34a;
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px #0002;
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        gap: 15px;
+      }
+
+      .hero-visual {
+        transform: scale(.85);
+      }
+
+      .about-grid,
+      .origin-grid {
+        gap: 30px;
+      }
+
+      .benefit-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 65px 0;
+      }
+
+      nav {
+        min-height: 70px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 5%;
+        background: #fffdf8;
+        border-bottom: 1px solid #f2e4c7;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #f2e9d8;
+      }
+
+      .nav-order {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 65px;
+        gap: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(43px, 12vw, 63px);
+      }
+
+      .hero-subtitle {
+        font-size: 19px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 370px;
+        transform: scale(.82);
+        margin: -15px 0;
+      }
+
+      .benefit-list {
+        gap: 22px 10px;
+      }
+
+      .benefit-item {
+        justify-content: flex-start;
+      }
+
+      .benefit-item .emoji {
+        font-size: 23px;
+      }
+
+      .benefit-item strong {
+        font-size: 11px;
+      }
+
+      .benefit-item small {
+        font-size: 10px;
+      }
+
+      .about-grid,
+      .origin-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-art {
+        min-height: 300px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-art {
+        height: 210px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .why-card {
+        padding: 24px 12px;
+      }
+
+      .why-card h3 {
+        font-size: 14px;
+      }
+
+      .origin-visual {
+        min-height: 220px;
+      }
+
+      .order-box {
+        padding: 35px 18px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 17px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo" aria-label="Honey Spoon home">
+        <span class="logo-icon">🍯</span>
+        <span>
+          Honey Spoon
+          <small>PURE GOODNESS, IN EVERY SPOON</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn"
+        aria-label="Open navigation menu"
+        aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Our Product</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="btn btn-gold nav-order"
+        href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon%2C%20I%20want%20to%20place%20an%20order."
+        target="_blank" rel="noopener noreferrer">
+        ₹25 / Spoon
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">🍯 A LITTLE SPOONFUL OF GOODNESS</span>
+
+          <h1>
+            Premium Honey
+            <span>Spoon</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Nature's Sweetness, Made Simple.
+          </p>
+
+          <p class="hero-description">
+            Discover our honey spoon, featuring honey sourced from
+            Kashipur. A convenient way to enjoy honey at home,
+            at work, or on the go.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-gold"
+              href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon%2C%20I%20want%20to%20order%20honey%20spoons."
+              target="_blank" rel="noopener noreferrer">
+              ☘ Order on WhatsApp →
+            </a>
+
+            <a class="btn btn-outline" href="#about">
+              Discover Our Story ↓
+            </a>
+          </div>
+
+          <p class="hero-note">
+            ✨ One spoon at just ₹25
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration of a honey jar">
+          <div class="honey-circle"></div>
+          <div class="honey-dipper">🥄</div>
+
+          <div class="honey-jar">
+            <div class="jar-shine"></div>
+          </div>
+
+          <div class="price-sticker">
+            <small>ONLY</small>
+            <strong>₹25</strong>
+            <small>PER SPOON</small>
+          </div>
+
+          <div class="flower">🌼</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS STRIP -->
+    <section class="benefits-strip">
+      <div class="container benefit-list">
+        <div class="benefit-item">
+          <span class="emoji">🍯</span>
+          <div>
+            <strong>Honey Spoon</strong>
+            <small>Simple and convenient</small>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <span class="emoji">📍</span>
+          <div>
+            <strong>Sourced from Kashipur</strong>
+            <small>Our honey's origin</small>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <span class="emoji">💛</span>
+          <div>
+            <strong>Easy to Order</strong>
+            <small>Contact us on WhatsApp</small>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <span class="emoji">💰</span>
+          <div>
+            <strong>₹25 Per Spoon</strong>
+            <small>Clear, simple pricing</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-art">
+          <div class="about-emoji">
+            🍯
+            <p>From Kashipur to You</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">Our Story</span>
+          <h2>About <span class="highlight">Honey Spoon</span></h2>
+
+          <p>
+            Welcome to Honey Spoon! We are building a brand around
+            the simple pleasure of honey, with a focus on convenient
+            portions and a friendly customer experience.
+          </p>
+
+          <p>
+            Our honey is sourced from Kashipur, Uttarakhand. We want
+            to make it easy for customers to discover our product,
+            learn about its origin, and place orders directly with us.
+          </p>
+
+          <div class="about-points">
+            <div class="about-point">
+              <span class="check">✓</span>
+              <div>
+                <strong>Honey from Kashipur</strong>
+                <small>We share the sourcing story behind our product.</small>
+              </div>
+            </div>
+
+            <div class="about-point">
+              <span class="check">✓</span>
+              <div>
+                <strong>Convenient Portions</strong>
+                <small>A handy format for enjoying honey.</small>
+              </div>
+            </div>
+
+            <div class="about-point">
+              <span class="check">✓</span>
+              <div>
+                <strong>Direct Customer Contact</strong>
+                <small>Ask questions and order through WhatsApp.</small>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn-gold" href="#contact">
+            Get in Touch →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Simple. Sweet. Convenient.</span>
+          <h2>Meet Our <span class="highlight">Honey Spoon</span></h2>
+          <p>
+            One simple product, made for your everyday honey moments.
+            Contact us for availability and bulk-order details.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card">
+            <div class="product-art">
+              <span>🥄</span>
+            </div>
+            <div class="product-info">
+              <h3>Honey Spoon</h3>
+              <p>
+                Our featured honey spoon, with honey sourced from Kashipur.
+              </p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  ₹25
+                  <small>PER SPOON</small>
+                </div>
+                <a class="btn btn-green"
+                  href="https://wa.me/919811268026?text=Hello%2C%20I%20want%20to%20order%20one%20Honey%20Spoon."
+                  target="_blank" rel="noopener noreferrer">
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art"
+              style="background:linear-gradient(135deg,#fff4d4,#f5d993)">
+              <span>🍯</span>
+            </div>
+            <div class="product-info">
+              <h3>Honey for Everyday Use</h3>
+              <p>
+                Interested in honey beyond individual spoons?
+                Contact us to ask about available options.
+              </p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  Ask Us
+                  <small>FOR AVAILABILITY</small>
+                </div>
+                <a class="btn btn-green"
+                  href="https://wa.me/919811268026?text=Hello%2C%20please%20tell%20me%20about%20your%20available%20honey%20products."
+                  target="_blank" rel="noopener noreferrer">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art"
+              style="background:linear-gradient(135deg,#ffe8ae,#f4bc47)">
+              <span>🎁</span>
+            </div>
+            <div class="product-info">
+              <h3>Bulk & Gift Orders</h3>
+              <p>
+                Planning an event, a gift, or a larger order?
+                Ask us about quantities and availability.
+              </p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  Enquire
+                  <small>FOR BULK ORDERS</small>
+                </div>
+                <a class="btn btn-green"
+                  href="https://wa.me/919811268026?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20bulk%20or%20gift%20orders."
+                  target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Honey Spoon?</span>
+          <h2>A Simple Way to Enjoy <span class="highlight">Honey</span></h2>
+          <p>
+            Our focus is a convenient product, clear pricing,
+            and easy communication with our customers.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <article class="why-card">
+            <div class="why-icon">📍</div>
+            <h3>Kashipur Sourcing</h3>
+            <p>
+              Our honey sourcing story begins in Kashipur, Uttarakhand.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">🥄</div>
+            <h3>Convenient Format</h3>
+            <p>
+              A spoon-sized option for simple, convenient use.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">₹</div>
+            <h3>Clear Pricing</h3>
+            <p>
+              The listed price is ₹25 for one honey spoon.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">💬</div>
+            <h3>Easy Communication</h3>
+            <p>
+              Reach us directly on WhatsApp with your questions.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KASHIPUR ORIGIN -->
+    <section class="origin">
+      <div class="container origin-grid">
+        <div>
+          <span class="origin-badge">📍 OUR SOURCING STORY</span>
+          <h2>Rooted in <span class="highlight">Kashipur</span></h2>
+
+          <p>
+            Kashipur, in Uttarakhand, is where we source our honey.
+            We believe customers should be able to learn about where
+            a product comes from and ask us questions about it.
+          </p>
+
+          <p>
+            Have a question about our honey, packaging, or order
+            quantities? We would be happy to hear from you.
+          </p>
+
+          <a class="btn btn-gold"
+            href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon%2C%20I%20would%20like%20to%20know%20more%20about%20your%20honey%20sourcing."
+            target="_blank" rel="noopener noreferrer">
+            Ask Us on WhatsApp →
+          </a>
+        </div>
+
+        <div class="origin-visual">
+          <span>🌿 Kashipur, Uttarakhand</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+          <p>Here are a few things you might want to know.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is the price of one honey spoon?</summary>
+            <p>One honey spoon is listed at ₹25.</p>
+          </details>
+
+          <details>
+            <summary>Where do you source your honey?</summary>
+            <p>Our honey is sourced from Kashipur, Uttarakhand.</p>
+          </details>
+
+          <details>
+            <summary>How can I place an order?</summary>
+            <p>
+              Click any Order on WhatsApp button on this website.
+              It will open a WhatsApp chat with our business number.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I enquire about bulk orders?</summary>
+            <p>
+              Yes, message us on WhatsApp to ask about bulk quantities,
+              availability, packaging, and pricing.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I learn about ingredients and packaging?</summary>
+            <p>
+              Contact us directly for product-specific ingredient,
+              packaging, storage, and other details.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL WHATSAPP CTA -->
+    <section class="order-section" id="contact">
+      <div class="container">
+        <div class="order-box">
+          <div class="big-emoji">🍯</div>
+          <span class="eyebrow">Your Honey Journey Starts Here</span>
+
+          <h2>Ready to Try <span class="highlight">Honey Spoon?</span></h2>
+
+          <p>
+            Want to order, ask a question, or discuss a bulk order?
+            Start a conversation with us on WhatsApp.
+          </p>
+
+          <a class="btn btn-green"
+            href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon%2C%20I%20am%20interested%20in%20your%20honey%20spoons%20priced%20at%20Rs%2025%20each."
+            target="_blank" rel="noopener noreferrer">
+            <span style="font-size:22px">◉</span>
+            Chat with Us on WhatsApp →
+          </a>
+
+          <div class="order-number">
+            WhatsApp: <strong>+91 98112 68026</strong>
+            <br>
+            <strong>₹25 per honey spoon</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <a href="#home" class="logo">
+            <span class="logo-icon">🍯</span>
+            <span>
+              Honey Spoon
+              <small>PURE GOODNESS, IN EVERY SPOON</small>
+            </span>
+          </a>
+
+          <p class="footer-description">
+            Honey sourced from Kashipur, with a convenient spoon-sized
+            product and simple ordering through WhatsApp.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Our Product</a>
+            <a href="#why-us">Why Choose Us</a>
+            <a href="#faq">Frequently Asked Questions</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <div class="footer-links">
+            <span>📍 Honey sourced from Kashipur</span>
+            <span>💰 ₹25 per spoon</span>
+            <a href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon"
+              target="_blank" rel="noopener noreferrer">
+              💬 WhatsApp: +91 98112 68026
+            </a>
+            <a href="#contact">Place an Order →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Honey Spoon. All rights reserved.</span>
+        <span>Made with 🍯 and care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="whatsapp-float"
+    href="https://wa.me/919811268026?text=Hello%20Honey%20Spoon%2C%20I%20want%20to%20know%20more."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Honey Spoon on WhatsApp">
+    <span style="font-size:20px">◉</span>
+    WhatsApp Us
+  </a>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuBtn.setAttribute("aria-expanded", isOpen);
+      menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuBtn.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after clicking a link
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open navigation menu");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    // Automatically update the copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
